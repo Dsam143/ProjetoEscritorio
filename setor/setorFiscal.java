@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class setorFiscal extends setorPai {
-
+ 
     Scanner recebe = new Scanner(System.in);
 
     public setorFiscal() {
@@ -13,47 +13,22 @@ public class setorFiscal extends setorPai {
     }
 
     public void calcularFaturamento() {
-        double[] faturamento = new double[11];
+        double[] faturamento = new double[12]; // Array para os 12 meses
+        String[] meses = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 
-        System.out.println("Qual foi o faturamento do mês de Janeiro?");
-        faturamento[0] = recebe.nextDouble();
+        Scanner recebe = new Scanner(System.in);
 
-        System.out.println("Qual foi o faturamento do mês de Fevereiro?");
-        faturamento[1] = recebe.nextDouble();
 
-        System.out.println("Qual foi o faturamento do mês de Março?");
-        faturamento[2] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Abril?");
-        faturamento[3] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Maio?");
-        faturamento[4] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Junho?");
-        faturamento[5] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Julho?");
-        faturamento[6] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Agosto?");
-        faturamento[7] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Setembro?");
-        faturamento[8] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Outubro?");
-        faturamento[9] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Novembro?");
-        faturamento[10] = recebe.nextDouble();
-
-        System.out.println("Qual foi o faturamento do mês de Dezembro?");
-        faturamento[11] = recebe.nextDouble();
+        for (int i = 0; i < meses.length; i++) {
+            System.out.println("Qual foi o faturamento do mês de " + meses[i] + "?");
+            faturamento[i] = recebe.nextDouble(); // Recebe o faturamento de cada mês
+        }
 
         recebe.close();
 
-        System.out.println(Arrays.toString(faturamento));
-        
+        System.out.println("Faturamento anual: " + Arrays.toString(faturamento));
+
     }
+
 }
+
