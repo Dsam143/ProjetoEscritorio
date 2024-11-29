@@ -28,7 +28,7 @@ public class principal {
         setorFiscal.prazo();
 
         setorPessoal.realizarAtividades();
-        setorPessoal.processarFolhaPagamento();
+        setorPessoal.data();
         setorPessoal.calcularDecimoTerceiro();
 
         setorContabil.realizarAtividades();
