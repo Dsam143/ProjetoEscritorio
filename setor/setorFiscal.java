@@ -13,7 +13,7 @@ public class setorFiscal extends setorPai implements data{
         super.realizarAtividades();
     }
 
-    void data(){
+   public void data(){
         System.out.println("O prazo de entrega é até o dia 15");
     }
 
@@ -28,9 +28,9 @@ public class setorFiscal extends setorPai implements data{
         Scanner recebe = new Scanner(System.in);
 
 
-        for (int i = 0; i < meses.length; i++) {
-            System.out.println("Qual foi o faturamento do mês de " + meses[i] + "?");
-            faturamento[i] = recebe.nextDouble(); // Recebe o faturamento de cada mês
+        for (int c = 0; c < meses.length; c++) {
+            System.out.println("Qual foi o faturamento do mês de " + meses[c] + "?");
+            faturamento[c] = recebe.nextDouble(); // Recebe o faturamento de cada mês
         }
 
         recebe.close();
