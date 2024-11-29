@@ -1,5 +1,7 @@
 package setor;
 
+import java.util.Scanner;
+
 public class setorPessoal extends setorPai implements data {
     public setorPessoal() {
         super("Setor Pessoal");
@@ -13,11 +15,19 @@ public class setorPessoal extends setorPai implements data {
         System.out.println("Atividades do setor: " + nome);
     }
 
-    public void processarFolhaPagamento() {
-        System.out.println("Processando folha de pagamento...");
-    }
-
     public void calcularDecimoTerceiro() {
-        System.out.println("Calculando décimo terceiro...");
+        Scanner recebe = new Scanner(System.in);
+
+
+        System.out.println("Quantos meses trabalhado?");
+        int mes = recebe.nextInt();
+
+        System.out.println("Qual o valor do salário?");
+        int salarioD = recebe.nextInt();
+
+        decTerc = (salarioD / 12) * mes;
+
+        System.out.println("O valor do décimo terceiro será: R$", decTerc);
+
     }
 }
