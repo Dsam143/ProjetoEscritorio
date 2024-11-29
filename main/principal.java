@@ -25,6 +25,7 @@ public class principal {
         // Atividades dos setores
         setorFiscal.realizarAtividades();
         setorFiscal.calcularFaturamento();
+        setorFiscal.prazo();
 
         setorPessoal.realizarAtividades();
         setorPessoal.processarFolhaPagamento();
