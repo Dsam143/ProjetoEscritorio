@@ -1,6 +1,6 @@
 package empresa;
 
-public class FuncionarioEmpresa {
+public class FuncionarioEmpresa{
     private String nome;
     private double salario;
 
